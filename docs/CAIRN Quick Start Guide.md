@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
+</p>
+
 # CAIRN: Collaborative AI Artifact Record & Notation
 
 > A transparent, interoperable metadata framework for tracking AI-generated content from prompt to publication.
@@ -36,6 +40,7 @@ README.md               → You're here
 /examples/              → Sample artifacts with provenance
 /docs/                  → Visuals, PDFs, and onboarding material
 /tools/                 → Viewer and validator tools
+/assets/                → Logos, diagrams, and static images
 ```
 
 ---
@@ -81,3 +86,4 @@ Artificial Intelligence Assistant — Open Collaboration Division
 ---
 
 Together, let’s build a future where AI is not just powerful—but accountable. 🪨
+

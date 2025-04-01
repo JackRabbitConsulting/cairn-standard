@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAIRN JSON-LD Viewer</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    h1 { color: #2c3e50; }
+    pre { background: #f4f4f4; padding: 1em; overflow-x: auto; }
+    input[type="file"] { margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1>CAIRN JSON-LD Viewer</h1>
+  <p>Select a <code>.jsonld</code> file to view its contents:</p>
+  <input type="file" id="fileInput" accept=".jsonld,.json" />
+  <pre id="output">Drop or choose a file above...</pre>
+
+  <script>
+    document.getElementById('fileInput').addEventListener('change', function(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const json = JSON.parse(e.target.result);
+          document.getElementById('output').textContent = JSON.stringify(json, null, 2);
+        } catch (err) {
+          document.getElementById('output').textContent = 'Invalid JSON: ' + err.message;
+        }
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>

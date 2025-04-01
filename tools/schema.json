@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CAIRN ContentArtifact",
+  "type": "object",
+  "required": [
+    "@context",
+    "@id",
+    "@type",
+    "cairn:artifactState",
+    "cairn:version"
+  ],
+  "properties": {
+    "@context": {
+      "type": "string"
+    },
+    "@id": {
+      "type": "string"
+    },
+    "@type": {
+      "type": "string",
+      "enum": [
+        "cairn:ContentArtifact"
+      ]
+    },
+    "cairn:artifactState": {
+      "type": "string",
+      "enum": [
+        "draft-alpha",
+        "draft-beta",
+        "finalized",
+        "archived",
+        "superseded"
+      ]
+    },
+    "cairn:version": {
+      "type": "string"
+    },
+    "cairn:originalText": {
+      "type": "string"
+    },
+    "cairn:normalizedText": {
+      "type": "string"
+    },
+    "cairn:language": {
+      "type": "string"
+    },
+    "cairn:encoding": {
+      "type": "string"
+    },
+    "prov:wasAttributedTo": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/agent"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/agent"
+          }
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "agent": {
+      "type": "object",
+      "required": [
+        "@id",
+        "prov:type"
+      ],
+      "properties": {
+        "@id": {
+          "type": "string"
+        },
+        "prov:type": {
+          "type": "string"
+        },
+        "foaf:name": {
+          "type": "string"
+        },
+        "cairn:role": {
+          "type": "string"
+        },
+        "cairn:modelVersion": {
+          "type": "string"
+        },
+        "cairn:platform": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

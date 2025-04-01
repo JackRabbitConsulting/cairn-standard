@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAIRN JSON-LD Validator</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    h1 { color: #2c3e50; }
+    input[type="file"] { margin-top: 1em; }
+    pre { background: #f4f4f4; padding: 1em; overflow-x: auto; border-radius: 5px; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>CAIRN JSON-LD Validator</h1>
+  <p>Select a <code>.jsonld</code> file to validate against the CAIRN schema:</p>
+  <input type="file" id="fileInput" accept=".jsonld,.json" />
+  <pre id="output">Drop or choose a file above...</pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/8.12.0/ajv7.min.js"></script>
+  <script>
+    const schema = {"$schema": "http://json-schema.org/draft-07/schema#", "title": "CAIRN ContentArtifact", "type": "object", "required": ["@context", "@id", "@type", "cairn:artifactState", "cairn:version"], "properties": {"@context": {"type": "string"}, "@id": {"type": "string"}, "@type": {"type": "string", "enum": ["cairn:ContentArtifact"]}, "cairn:artifactState": {"type": "string", "enum": ["draft-alpha", "draft-beta", "finalized", "archived", "superseded"]}, "cairn:version": {"type": "string"}, "cairn:originalText": {"type": "string"}, "cairn:normalizedText": {"type": "string"}, "cairn:language": {"type": "string"}, "cairn:encoding": {"type": "string"}, "prov:wasAttributedTo": {"oneOf": [{"$ref": "#/definitions/agent"}, {"type": "array", "items": {"$ref": "#/definitions/agent"}}]}}, "definitions": {"agent": {"type": "object", "required": ["@id", "prov:type"], "properties": {"@id": {"type": "string"}, "prov:type": {"type": "string"}, "foaf:name": {"type": "string"}, "cairn:role": {"type": "string"}, "cairn:modelVersion": {"type": "string"}, "cairn:platform": {"type": "string"}}}}};
+
+    document.getElementById('fileInput').addEventListener('change', function(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const content = e.target.result;
+        try {
+          const data = JSON.parse(content);
+          const ajv = new Ajv();
+          const validate = ajv.compile(schema);
+          const valid = validate(data);
+          const output = document.getElementById('output');
+          if (valid) {
+            output.innerHTML = "<span class='success'>✔ Valid CAIRN JSON-LD file!</span>";
+          } else {
+            output.innerHTML = "<span class='error'>✖ Validation errors:</span>\n" + JSON.stringify(validate.errors, null, 2);
+          }
+        } catch (err) {
+          document.getElementById('output').textContent = 'Invalid JSON: ' + err.message;
+        }
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>
