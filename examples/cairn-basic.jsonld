@@ -1,0 +1,17 @@
+{
+  "@context": "https://cairn.ai/ns#",
+  "@id": "urn:cairn:artifact:example-basic-001",
+  "@type": "cairn:ContentArtifact",
+  "cairn:artifactState": "draft-alpha",
+  "cairn:version": "0.1.0",
+  "prov:wasAttributedTo": {
+    "@id": "urn:person:nick-stavros",
+    "prov:type": "prov:Person",
+    "foaf:name": "R. W. 'Nick' Stavros, Ph.D.",
+    "cairn:role": "promptAuthor"
+  },
+  "cairn:originalText": "Create an AI metadata proposal",
+  "cairn:normalizedText": "Please draft a standards proposal for tracking AI content provenance.",
+  "cairn:language": "en-US",
+  "cairn:encoding": "UTF-8"
+}

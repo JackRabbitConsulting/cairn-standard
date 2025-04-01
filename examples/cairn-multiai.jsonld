@@ -1,0 +1,33 @@
+{
+  "@context": "https://cairn.ai/ns#",
+  "@id": "urn:cairn:artifact:example-multiai-001",
+  "@type": "cairn:ContentArtifact",
+  "cairn:artifactState": "draft-beta",
+  "cairn:version": "0.2.0",
+  "prov:wasAttributedTo": [
+    {
+      "@id": "urn:person:nick-stavros",
+      "prov:type": "prov:Person",
+      "foaf:name": "R. W. 'Nick' Stavros, Ph.D.",
+      "cairn:role": "promptAuthor"
+    },
+    {
+      "@id": "urn:ai:openai:gpt-4-turbo",
+      "prov:type": "prov:SoftwareAgent",
+      "cairn:role": "aiEditor",
+      "cairn:modelVersion": "GPT-4 Turbo",
+      "cairn:platform": "OpenAI"
+    },
+    {
+      "@id": "urn:ai:meta:llama-3",
+      "prov:type": "prov:SoftwareAgent",
+      "cairn:role": "aiReviewer",
+      "cairn:modelVersion": "LLaMA 3",
+      "cairn:platform": "Meta AI"
+    }
+  ],
+  "cairn:originalText": "Can you help me standardize AI provenance tracking?",
+  "cairn:normalizedText": "Please assist in developing a metadata model for AI content tracking.",
+  "cairn:language": "en-US",
+  "cairn:encoding": "UTF-8"
+}
