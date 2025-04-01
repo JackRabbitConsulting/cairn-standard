@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
+</p>
+
 # CAIRN: Collaborative AI Artifact Record & Notation
 
 > A transparent, interoperable metadata framework for tracking AI-generated content from prompt to publication.
@@ -31,10 +35,11 @@ CAIRN is a JSON-LD–based metadata model that captures:
 ## 📂 Repo Structure
 
 ```
-README.md               → You're here
-/spec/                  → JSON-LD schema and context
-/examples/              → Sample artifacts with provenance
+/assets/                → Logos, diagrams, and static images
 /docs/                  → Visuals, PDFs, and onboarding material
+/examples/              → Sample artifacts with provenance
+/README.md              → You're here
+/spec/                  → JSON-LD schema and context
 /tools/                 → Viewer and validator tools
 ```
 
@@ -71,9 +76,9 @@ less examples/cairn-basic.jsonld
 ## 📬 Contact
 
 **R. W. "Nick" Stavros, Ph.D.**  
-Jackrabbit Consulting / OMG Pedigree & Provenance WG  
-📧 [Your Email]  
-🌐 [jackrabbit.consulting] *(optional)*
+Jackrabbit Consulting / Dido Solutions / [Artificial Intelligence Platform Task Force](https://www.omg.org/ai/)  
+📧 Nick@DrStavros.com  
+🌐 [didosolutions.com/about](https://didosolutions.com/about/)
 
 AI Research Partner: **Hamish I. MacCloud, AIA**  
 Artificial Intelligence Assistant — Open Collaboration Division
