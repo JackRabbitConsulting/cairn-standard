@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CAIRN Collaborative Artifact",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": [
+        "string",
+        "object"
+      ]
+    },
+    "@id": {
+      "type": "string"
+    },
+    "@type": {
+      "type": "string"
+    },
+    "cairn:artifactState": {
+      "type": "string"
+    },
+    "cairn:version": {
+      "type": "string"
+    },
+    "cairn:language": {
+      "type": "string"
+    },
+    "cairn:encoding": {
+      "type": "string"
+    },
+    "cairn:semanticHints": {
+      "type": "string"
+    },
+    "cairn:originalText": {
+      "type": "string"
+    },
+    "cairn:normalizedText": {
+      "type": "string"
+    },
+    "cairn:promptAuthor": {
+      "type": "object"
+    },
+    "cairn:modelUsed": {
+      "type": "object"
+    },
+    "cairn:humanReviewer": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "cairn:humanEditor": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "cairn:approver": {
+      "type": "object"
+    },
+    "cairn:references": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "cairn:dialogThreadId": {
+      "type": "string"
+    },
+    "cairn:journal": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "const": "cairn:Journal"
+        },
+        "cairn:journalState": {
+          "type": "string"
+        },
+        "cairn:journalApprover": {
+          "type": "object"
+        },
+        "cairn:entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "@id": {
+                "type": "string"
+              },
+              "cairn:humanText": {
+                "type": "string"
+              },
+              "cairn:aiInterpretation": {
+                "type": "string"
+              },
+              "cairn:aiResponse": {
+                "type": "string"
+              },
+              "cairn:timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "cairn:entryIntent": {
+                "type": "string"
+              },
+              "cairn:entryState": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id",
+              "cairn:humanText",
+              "cairn:aiResponse"
+            ]
+          }
+        }
+      },
+      "required": [
+        "@type",
+        "cairn:journalState",
+        "cairn:journalApprover",
+        "cairn:entries"
+      ]
+    }
+  },
+  "required": [
+    "@context",
+    "@id",
+    "@type",
+    "cairn:artifactState"
+  ]
+}
