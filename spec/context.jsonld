@@ -11,6 +11,22 @@
     "cairn:version": "xsd:string",
     "cairn:language": "xsd:string",
     "cairn:encoding": "xsd:string",
-    "cairn:semanticHints": "xsd:string"
+    "cairn:semanticHints": "xsd:string",
+    "cairn:humanContributors": {
+      "@type": "@id"
+    },
+    "cairn:aiContributors": {
+      "@type": "@id"
+    },
+    "cairn:role": "xsd:string",
+    "cairn:contributionTimestamp": {
+      "@type": "xsd:dateTime"
+    },
+    "cairn:modelVersion": "xsd:string",
+    "cairn:platform": "xsd:string",
+    "cairn:reviewPurpose": "xsd:string",
+    "cairn:reviewTimestamp": {
+      "@type": "xsd:dateTime"
+    }
   }
 }
