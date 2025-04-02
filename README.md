@@ -31,6 +31,10 @@ CAIRN is a JSON-LD–based metadata model that captures:
 - Many-to-many dialog graphs across systems
 
 ---
+![CAIRN Collaboration Overview](assets/diagram-contributors.png)
+
+**Figure.** CAIRN models collaborative workflows between humans and AIs, each with role-specific attribution.
+
 
 ## 📂 Repo Structure
 
@@ -85,4 +89,10 @@ Artificial Intelligence Assistant — Open Collaboration Division
 
 ---
 
-Together, let’s build a future where AI is not just powerful—but accountable. 🪨
+Together, let’s build a future where AI is not just powerful—but accountable. 
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE.md).🪨

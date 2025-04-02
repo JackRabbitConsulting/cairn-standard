@@ -54,6 +54,10 @@ less examples/cairn-basic.jsonld
 ```
 
 ---
+![CAIRN Collaboration Diagram](assets/diagram-contributors.png)
+
+**Figure.** Human and AI contributors across the CAIRN lifecycle.
+
 
 ## 🛠️ Tooling Support
 
