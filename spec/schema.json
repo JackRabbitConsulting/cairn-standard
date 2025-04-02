@@ -121,6 +121,73 @@
         "cairn:journalApprover",
         "cairn:entries"
       ]
+    },
+    "cairn:humanContributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string"
+          },
+          "foaf:name": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string",
+            "const": "foaf:Person"
+          },
+          "cairn:role": {
+            "type": "string"
+          },
+          "cairn:contributionTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "@id",
+          "foaf:name",
+          "@type"
+        ]
+      }
+    },
+    "cairn:aiContributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string"
+          },
+          "prov:type": {
+            "type": "string",
+            "const": "prov:SoftwareAgent"
+          },
+          "cairn:role": {
+            "type": "string"
+          },
+          "cairn:platform": {
+            "type": "string"
+          },
+          "cairn:modelVersion": {
+            "type": "string"
+          },
+          "cairn:reviewPurpose": {
+            "type": "string"
+          },
+          "cairn:reviewTimestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "@id",
+          "prov:type",
+          "cairn:platform",
+          "cairn:modelVersion"
+        ]
+      }
     }
   },
   "required": [
