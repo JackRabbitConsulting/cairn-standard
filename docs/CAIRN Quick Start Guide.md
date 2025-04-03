@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://jackrabbitconsulting.github.io/cairn-standard/docs/assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
+  <img src="assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
 </p>
 
 # CAIRN: Collaborative AI Artifact Record & Notation
