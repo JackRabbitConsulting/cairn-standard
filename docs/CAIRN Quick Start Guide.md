@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://jackrabbitconsulting.github.io/cairn-standard/assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
+  <img src="https://jackrabbitconsulting.github.io/cairn-standard/docs/assets/cairn-logo.png" alt="CAIRN Logo" width="300"/>
 </p>
 
 # CAIRN: Collaborative AI Artifact Record & Notation
@@ -39,8 +39,8 @@ README.md               → You're here
 /spec/                  → JSON-LD schema and context
 /examples/              → Sample artifacts with provenance
 /docs/                  → Visuals, PDFs, and onboarding material
+/docs/assets/           → Logos, diagrams, and static images
 /tools/                 → Viewer and validator tools
-/assets/                → Logos, diagrams, and static images
 ```
 
 ---
@@ -54,7 +54,8 @@ less examples/cairn-basic.jsonld
 ```
 
 ---
-![CAIRN Collaboration Diagram](assets/diagram-contributors.png)
+![CAIRN Collaboration Diagram](https://jackrabbitconsulting.github.io/cairn-standard/docs/assets/diagram-contributors.png)
+
 
 **Figure.** Human and AI contributors across the CAIRN lifecycle.
 

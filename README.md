@@ -20,7 +20,7 @@ Use the following tools from the `/tools/` directory:
 See the [CAIRN Quick Start Guide](docs/CAIRN%20Quick%20Start%20Guide.md) or download the [PDF](docs/CAIRN%20Quick%20Start%20Guide.pdf).
 
 ---
-
+  
 ## 📄 White Paper
 
 The official CAIRN white paper outlines the goals, structure, and implementation details of the standard.
