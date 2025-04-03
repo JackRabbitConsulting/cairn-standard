@@ -5,7 +5,7 @@ It captures the contributions of both human and AI participants, ensuring transp
 
 CAIRN supports provenance, prompt fidelity, references, lifecycle states, multi-agent collaboration, and audit-ready records—making it ideal for regulatory, scientific, engineering, and legal use cases.
 
-![CAIRN Logo](assets/cairn-logo.png)
+![CAIRN Logo](docs/assets/cairn-logo.png)
 
 ---
 
